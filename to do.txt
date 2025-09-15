@@ -1,0 +1,66 @@
+📋 Checklist de base para tu landing (sin material aún)
+1️⃣ Estructura de la página
+
+Definí las secciones principales (aunque estén vacías):
+
+Hero / portada
+
+Beneficios o servicios
+
+Testimonios / reviews
+
+Llamado a la acción (CTA)
+
+Footer
+
+Podés usar <div> con min-h y texto de relleno (Lorem Ipsum) para visualizar el layout.
+
+2️⃣ Layout y componentes
+
+Crear un Layout.astro con <head> y <footer> para no repetirlo.
+
+Componentes reutilizables:
+
+Botón (Button.astro o React si querés)
+
+Card para beneficios o cursos
+
+Header / Navbar
+
+3️⃣ Tailwind listo
+
+Configurar tu tailwind.config.js con colores y fuentes (aunque sean provisionales).
+
+Probar clases básicas para asegurarte que se ve el estilo.
+
+Preparar clases utilitarias para botones, cards, etc., aunque sean placeholders.
+
+4️⃣ SEO básico
+
+Crear un componente SEO.astro con <title>, <meta> y Open Graph.
+
+Poner textos de ejemplo para que luego solo los reemplaces.
+
+5️⃣ Formularios y botones
+
+Crear un formulario de contacto o sección de suscripción (aunque sin funcionalidad aún).
+
+Preparar los botones con clases de Tailwind.
+
+6️⃣ Animaciones / interactividad ligera
+
+Agregar animaciones simples con Tailwind (transition, hover, animate-*).
+
+Si querés, dejar Framer Motion listo por si después usás React.
+
+7️⃣ Deploy de prueba
+
+Subir a Vercel / Netlify / Hostinger aunque solo tenga placeholders.
+
+Sirve para mostrarle al cliente un preview inicial y que vea la estructura.
+
+8️⃣ Imágenes y logos placeholders
+
+Usar imágenes temporales (https://placehold.co/) para que las secciones tengan sentido visual.
+
+Así no esperás a que el cliente te mande todo el material.
