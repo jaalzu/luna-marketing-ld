@@ -1,16 +1,31 @@
 ---
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
 import "../styles/global.css";
-import Saludo from "../components/Saludo.jsx";
 
 
 ---
 
-<div id="container">
-	    <!-- <Saludo name="Noname" client:load /> -->
-	<h1 class="text-brand-light bg-brand-dark text-3xl p-4">
-  Hello world!
-</h1>
+<header class="flex flex-col items-center justify-center text-center px-4 py-12 space-y-6">
+  <!-- Gradiente arriba -->
+  <div class="bg-gradient-to-r from-[#d5f1fb] to-[#d9f9ee] inline-block px-4 py-2 rounded text-xs font-medium">
+    Domina los negocios digitales
+  </div>
+
+  <!-- H1 principal -->
+  <h1 class="text-[33px] md:text-[64px] leading-tight md:leading-[1.2] tracking-tight md:tracking-normal font-bold">
+    Lanza tu negocio al siguiente nivel
+  </h1>
+
+  <!-- Descripción -->
+  <p class="text-[14px] md:text-[18px] leading-relaxed md:leading-loose tracking-wide md:tracking-wider max-w-xl">
+    Aprende estrategias digitales efectivas, herramientas y secretos para crecer tu negocio desde cero.
+  </p>
+
+  <!-- Botón CTA -->
+  <button class="px-6 py-3 bg-blue-600 text-white text-base md:text-lg rounded hover:bg-blue-700 transition-colors font-semibold">
+    Conseguir ebook
+  </button>
+</header>
+
+
 
 </div>

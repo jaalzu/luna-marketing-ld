@@ -1,3 +1,10 @@
+
+---
+import Navbar from '../components/Navbar.astro';
+import Header from '../components/Header.astro';
+---
+
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,14 +12,22 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Brnsoon</title>
 	</head>
 	<body>
+		<Navbar>
+		</Navbar>
+		<Header>
+
+		</Header>
 		<slot />
 	</body>
 </html>
-  <script src="../scripts/main.js"></script>
 
 <style>
-  @import '../styles/layout.css';
+	body{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+}
 </style>

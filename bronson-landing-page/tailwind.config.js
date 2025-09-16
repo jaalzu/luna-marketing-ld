@@ -3,12 +3,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        brand: {
-          testred: "#ff0000",
-          DEFAULT: "#2563eb",
-          light: "#60a5fa",
-          dark: "#1e40af",
-        },
+          primary: "#c79d5d",
+          secondary: "#1e40af",       
       },
     },
   },

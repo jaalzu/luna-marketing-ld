@@ -1,0 +1,46 @@
+<nav class="w-full bg-white ">
+  <div class="max-w-screen-2xl mx-auto flex items-center justify-between py-5 px-5">
+    <!-- Logo -->
+    <a href="#" class="text-xl font-bold text-slate-800">Material Tailwind</a>
+
+    <!-- Botón hamburguesa móvil -->
+    <button id="menu-btn" class="lg:hidden text-slate-800 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <!-- Links + CTA -->
+    <div id="menu" class="hidden lg:flex items-center space-x-6">
+      <a href="#" class="text-slate-700 hover:text-primary">Inicio</a>
+      <a href="#" class="text-slate-700 hover:text-primary">Servicios</a>
+      <a href="#" class="text-slate-700 hover:text-primary">Contacto</a>
+      <button class="px-2 py-2 bg-black text-white rounded hover:bg-primary">
+              Conseguir ebook
+      </button>
+    </div>
+  </div>
+
+  <!-- Menú móvil -->
+  <div id="mobile-menu" class="lg:hidden hidden px-4 pb-4">
+    <a href="#" class="block py-2 text-slate-700 hover:text-slate-900">Inicio</a>
+    <a href="#" class="block py-2 text-slate-700 hover:text-slate-900">Servicios</a>
+    <a href="#" class="block py-2 text-slate-700 hover:text-slate-900">Contacto</a>
+    <button class="w-full mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+      Conseguir ebook
+    </button>
+  </div>
+</nav>
+
+
+
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
