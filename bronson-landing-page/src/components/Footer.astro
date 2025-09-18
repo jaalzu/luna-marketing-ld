@@ -1,0 +1,63 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-gradient-to-b from-[#0a0a0a] to-[#111] text-white mt-20">
+  <div class="max-w-6xl mx-auto px-6 py-10 md:py-14 grid grid-cols-1 md:grid-cols-3 gap-8">
+    
+    <!-- Columna 1: Branding -->
+    <div class="flex flex-col gap-3">
+      <h2 class="text-2xl font-bold tracking-tight">SOY AZUL</h2>
+      <p class="text-white/70 text-sm leading-relaxed">
+        Transformando ideas en experiencias digitales únicas. 
+        Creemos en el poder del diseño y la tecnología para inspirar.
+      </p>
+    </div>
+
+    <!-- Columna 2: Links -->
+    <div class="grid grid-cols-2 gap-4 md:gap-8">
+      <div>
+        <h3 class="font-semibold mb-2">Secciones</h3>
+        <ul class="space-y-1 text-white/70">
+          <li><a href="#about" class="hover:text-[#00ffe0] transition">Sobre mí</a></li>
+          <li><a href="#services" class="hover:text-[#00ffe0] transition">Servicios</a></li>
+          <li><a href="#contact" class="hover:text-[#00ffe0] transition">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Recursos</h3>
+        <ul class="space-y-1 text-white/70">
+          <li><a href="#" class="hover:text-[#00ffe0] transition">Blog</a></li>
+          <li><a href="#" class="hover:text-[#00ffe0] transition">Portfolio</a></li>
+          <li><a href="#" class="hover:text-[#00ffe0] transition">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Columna 3: Redes Sociales -->
+    <div class="flex flex-col gap-4">
+      <h3 class="font-semibold">Seguime</h3>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-[#00ffe0] transition" aria-label="Instagram">
+          <!-- SVG de Instagram -->
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5ZM12 7a5 5 0 1 1 0 10a5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7Zm5.25-.75a.75.75 0 1 1 0 1.5a.75.75 0 0 1 0-1.5Z"/></svg>
+        </a>
+        <a href="#" class="hover:text-[#00ffe0] transition" aria-label="Twitter">
+          <!-- SVG de Twitter/X -->
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.53 3H20l-4.38 5.06L21 21h-5.53l-3.88-6.33L7.24 21H4.75l4.64-5.37L3 3h5.53l3.55 5.87L17.53 3Zm-2.08 15.4h1.22L8.74 4.6H7.47l7.98 13.8Z"/></svg>
+        </a>
+        <a href="#" class="hover:text-[#00ffe0] transition" aria-label="LinkedIn">
+          <!-- SVG de LinkedIn -->
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.5 8h4v13h-4V8ZM8.5 8h3.8v1.8h.1c.53-1 1.82-2 3.74-2 4 0 4.7 2.6 4.7 6v7.2h-4v-6.4c0-1.5 0-3.5-2.1-3.5-2.1 0-2.4 1.6-2.4 3.4V21h-4V8Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Línea final -->
+  <div class="border-t border-white/10 mt-8">
+    <p class="text-center text-xs text-white/50 py-4">
+      © {year} SOY AZUL. Todos los derechos reservados.
+    </p>
+  </div>
+</footer>
