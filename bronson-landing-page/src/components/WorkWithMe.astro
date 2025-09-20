@@ -1,0 +1,36 @@
+---
+// WorkWithMe.astro
+---
+
+<section class="w-full bg-gradient-to-br from-gray-900 via-gray-800 to-black py-12 px-6 md:px-16">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:gap-10">
+
+    <!-- Columna izquierda -->
+    <div class="flex flex-col gap-4 md:w-2/5 text-white">
+      <h4 class="text-[32px] md:text-[52px] font-bold text-center md:text-left leading-tight">
+        Mentorías 1:1
+      </h4>
+      <p class="text-[16px] md:text-[18px] text-white/80 leading-relaxed text-center md:text-left">
+        Trabajar juntos de forma personalizada puede acelerar tu aprendizaje y darte claridad
+        en tu camino como desarrollador. Vamos paso a paso con tu proyecto, código o roadmap.
+      </p>
+      <button
+        class="mx-auto md:mx-0 mt-3 bg-[#00ffe0] text-black text-[18px] md:text-[20px] font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-gradient-to-r hover:from-[#d5f1fb] hover:to-[#d9f9ee] transition-all duration-300">
+        Trabaja conmigo
+      </button>
+    </div>
+
+    <!-- Columna derecha (imagen de fondo) -->
+    <div
+      class="relative md:w-3/5 h-72 md:h-[400px] mt-8 md:mt-0 rounded-2xl overflow-hidden shadow-xl">
+      <img
+        src="/images/mentoria-bg.jpg"
+        alt="Foto de mentoría"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <!-- Overlay para difuminar -->
+      <div class="absolute inset-0 bg-gradient-to-l from-black/60 via-black/30 to-transparent"></div>
+    </div>
+
+  </div>
+</section>

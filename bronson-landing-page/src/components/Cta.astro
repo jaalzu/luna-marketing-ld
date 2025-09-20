@@ -2,64 +2,68 @@
 // EbookCTA.astro
 ---
 
-<section class="relative py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden">
-  <!-- Background decoration -->
-  <div class="absolute inset-0 opacity-10">
-    <div class="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full blur-3xl"></div>
+<section class="relative py-20 bg-white overflow-hidden">
+  <!-- Background decoration (más sutil con blanco) -->
+  <div class="absolute inset-0 opacity-30">
+    <div class="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-[#00ffe0] to-[#0077ff] rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-[#00d4aa] to-[#00ffe0] rounded-full blur-3xl"></div>
   </div>
 
   <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <!-- Motivational phrase -->
     <div class="mb-8">
-      <p class="text-lg md:text-xl text-gray-300 font-light leading-relaxed">
+      <p class="text-lg md:text-xl text-gray-700 font-light leading-relaxed">
         "El conocimiento es poder, pero el conocimiento aplicado es 
-        <span class="font-semibold" style="color: #00ffe0;">transformación</span>"
+        <span class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#00ffe0] to-[#0077ff]">
+          transformación
+        </span>"
       </p>
     </div>
 
     <!-- Main heading -->
-    <h2 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+    <h2 class="text-4xl md:text-6xl font-bold text-black mb-6 leading-tight">
       Descarga tu 
       <span class="relative inline-block">
-        <span style="color: #00ffe0;">Ebook Gratuito</span>
-        <div class="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-current to-transparent opacity-60" style="color: #00ffe0;"></div>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00ffe0] to-[#0077ff]">
+          Ebook Gratuito
+        </span>
+        <div class="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-[#00ffe0] to-[#0077ff] opacity-60"></div>
       </span>
     </h2>
 
     <!-- Subtitle -->
-    <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+    <p class="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
       "Los 7 Secretos que Todo Emprendedor Debe Conocer para 
-      <strong class="text-white">Escalar su Negocio</strong> en 2024"
+      <strong class="text-black">Escalar su Negocio</strong> en 2024"
     </p>
 
     <!-- Benefits list -->
     <div class="grid md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
       <div class="flex items-center space-x-3 text-left">
-        <div class="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center" style="background-color: #00ffe0;">
+        <div class="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center bg-gradient-to-r from-[#00ffe0] to-[#0077ff]">
           <svg class="w-4 h-4 text-black font-bold" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
           </svg>
         </div>
-        <span class="text-gray-300">Estrategias probadas</span>
+        <span class="text-gray-700">Estrategias probadas</span>
       </div>
       
       <div class="flex items-center space-x-3 text-left">
-        <div class="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center" style="background-color: #00ffe0;">
+        <div class="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center bg-gradient-to-r from-[#00ffe0] to-[#0077ff]">
           <svg class="w-4 h-4 text-black font-bold" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
           </svg>
         </div>
-        <span class="text-gray-300">Casos de éxito reales</span>
+        <span class="text-gray-700">Casos de éxito reales</span>
       </div>
       
       <div class="flex items-center space-x-3 text-left">
-        <div class="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center" style="background-color: #00ffe0;">
+        <div class="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center bg-gradient-to-r from-[#00ffe0] to-[#0077ff]">
           <svg class="w-4 h-4 text-black font-bold" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
           </svg>
         </div>
-        <span class="text-gray-300">Herramientas gratuitas</span>
+        <span class="text-gray-700">Herramientas gratuitas</span>
       </div>
     </div>
 
@@ -70,39 +74,37 @@
           <input 
             type="email" 
             placeholder="Tu mejor email" 
-            class="w-full px-6 py-4 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent"
-            style="focus:ring-color: #00ffe0;"
+            class="w-full px-6 py-4 rounded-full bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00ffe0]"
             required
           />
         </div>
         
         <button 
           type="submit"
-          class="w-full py-4 px-8 rounded-full font-semibold text-black text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl transform"
-          style="background: linear-gradient(135deg, #00ffe0 0%, #00d4aa 100%);"
+          class="w-full py-4 px-8 rounded-full font-semibold text-black text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl transform bg-gradient-to-r from-[#00ffe0] to-[#0077ff]"
         >
           🚀 Descargar Ebook GRATIS
         </button>
       </form>
 
       <!-- Trust indicators -->
-      <div class="mt-6 flex items-center justify-center space-x-6 text-sm text-gray-400">
+      <div class="mt-6 flex items-center justify-center space-x-6 text-sm text-gray-500">
         <div class="flex items-center space-x-2">
-          <svg class="w-4 h-4" style="color: #00ffe0;" fill="currentColor" viewBox="0 0 20 20">
+          <svg class="w-4 h-4 text-[#00ffe0]" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2z" clip-rule="evenodd"></path>
           </svg>
           <span>100% Seguro</span>
         </div>
         
         <div class="flex items-center space-x-2">
-          <svg class="w-4 h-4" style="color: #00ffe0;" fill="currentColor" viewBox="0 0 20 20">
+          <svg class="w-4 h-4 text-[#00ffe0]" fill="currentColor" viewBox="0 0 20 20">
             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
           </svg>
           <span>Sin Spam</span>
         </div>
         
         <div class="flex items-center space-x-2">
-          <svg class="w-4 h-4" style="color: #00ffe0;" fill="currentColor" viewBox="0 0 20 20">
+          <svg class="w-4 h-4 text-[#00ffe0]" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
           </svg>
           <span>Descarga Instantánea</span>
@@ -110,47 +112,9 @@
       </div>
 
       <!-- Social proof -->
-      <p class="mt-8 text-gray-400 text-sm">
-        <strong class="text-white">+15,000</strong> emprendedores ya lo descargaron
+      <p class="mt-8 text-gray-500 text-sm">
+        <strong class="text-black">+15,000</strong> emprendedores ya lo descargaron
       </p>
     </div>
   </div>
 </section>
-
-<style>
-  /* Custom focus styles for the email input */
-  input:focus {
-    box-shadow: 0 0 0 2px #00ffe0 !important;
-  }
-  
-  /* Enhance the gradient button hover effect */
-  button:hover {
-    box-shadow: 0 10px 40px rgba(0, 255, 224, 0.3);
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .grid {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-    
-    .flex.items-center.space-x-3 {
-      justify-content: center;
-    }
-  }
-</style>
-
-<script>
-  // Form submission handler
-  document.querySelector('form')?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const email = e.target.querySelector('input[type="email"]').value;
-    
-    // Aquí puedes agregar tu lógica de envío
-    console.log('Email submitted:', email);
-    
-    // Simulación de descarga
-    alert(`¡Gracias! El ebook será enviado a ${email} en unos minutos.`);
-  });
-</script>
