@@ -1,0 +1,115 @@
+---
+// Testimonials.astro
+const testimonials = [
+  {
+    id: 1,
+    name: "María González",
+    role: "Empresaria",
+    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=64&h=64&fit=crop&crop=face&auto=format",
+    comment: "Increíble servicio, superó todas mis expectativas. El equipo es muy profesional y siempre están disponibles para ayudar.",
+    rating: 5,
+    duration: "2:34"
+  },
+  {
+    id: 2,
+    name: "Carlos Ruiz",
+    role: "Director de Marketing",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=64&h=64&fit=crop&crop=face&auto=format",
+    comment: "La mejor decisión que tomamos fue trabajar con ellos. Los resultados hablan por sí solos.",
+    rating: 5,
+    duration: "1:45"
+  },
+  {
+    id: 3,
+    name: "Ana Martín",
+    role: "CEO Startup",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=64&h=64&fit=crop&crop=face&auto=format",
+    comment: "Transformaron completamente nuestro negocio. Su enfoque innovador marcó la diferencia.",
+    rating: 5,
+    duration: "3:12"
+  },
+  {
+    id: 4,
+    name: "Jorge López",
+    role: "Freelancer",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=64&h=64&fit=crop&crop=face&auto=format",
+    comment: "Excelente atención al cliente y resultados excepcionales. Los recomiendo al 100%.",
+    rating: 5,
+    duration: "2:18"
+  }
+];
+---
+
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <!-- Header -->
+  <div class="text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      Lo que dicen nuestros clientes
+    </h2>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+      Descubre por qué miles de personas confían en nosotros
+    </p>
+  </div>
+
+  <!-- Testimonials Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {testimonials.map((testimonial) => (
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <!-- Video Container -->
+        <div class="relative bg-gray-900 aspect-video">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <!-- Play Button -->
+            <button class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+              <svg class="w-6 h-6 text-gray-900 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M8 5v10l8-5z"/>
+              </svg>
+            </button>
+          </div>
+          <!-- Video Duration -->
+          <div class="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
+            {testimonial.duration}
+          </div>
+        </div>
+        
+        <!-- Content -->
+        <div class="p-6">
+          <div class="flex items-center mb-4">
+            <img 
+              src={testimonial.image} 
+              alt={testimonial.name}
+              class="w-12 h-12 rounded-full object-cover"
+            />
+            <div class="ml-4">
+              <h3 class="font-semibold text-gray-900">{testimonial.name}</h3>
+              <p class="text-gray-600 text-sm">{testimonial.role}</p>
+            </div>
+          </div>
+          
+          <!-- Stars -->
+          <div class="flex mb-3">
+            {Array.from({ length: testimonial.rating }, (_, i) => (
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.123-6.545L0 6.91l6.564-.955L10 0l3.436 5.955L20 6.91l-5.245 4.635L16.878 18z"/>
+              </svg>
+            ))}
+          </div>
+          
+          <!-- Comment -->
+          <blockquote class="text-gray-700 leading-relaxed">
+            "{testimonial.comment}"
+          </blockquote>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<script>
+  // Funcionalidad para los botones de play (opcional)
+  document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', () => {
+      // Aquí puedes agregar la lógica para reproducir el video
+      console.log('Reproducir video testimonio');
+    });
+  });
+</script>
