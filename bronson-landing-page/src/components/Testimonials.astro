@@ -6,7 +6,7 @@ const testimonials = [
     name: "María González",
     role: "Empresaria",
     image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=64&h=64&fit=crop&crop=face&auto=format",
-    comment: "Increíble servicio, superó todas mis expectativas. El equipo es muy profesional y siempre están disponibles para ayudar.",
+    comment: "Increíble servicio, superó todas mis expectativas. El equipo es muy profesional.",
     rating: 5,
     duration: "2:34"
   },
@@ -40,62 +40,59 @@ const testimonials = [
 ];
 ---
 
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
   <!-- Header -->
-  <div class="text-center mb-12">
-    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-      Lo que dicen nuestros clientes
-    </h2>
-    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-      Descubre por qué miles de personas confían en nosotros
-    </p>
+  <div class="text-center mb-8">
+    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+      Testimonios
+    </h3>
   </div>
 
   <!-- Testimonials Grid -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-12">
     {testimonials.map((testimonial) => (
-      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
         <!-- Video Container -->
-        <div class="relative bg-gray-900 aspect-video">
+        <div class="relative bg-gray-900 aspect-[5/3]">
           <div class="absolute inset-0 flex items-center justify-center">
             <!-- Play Button -->
-            <button class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
-              <svg class="w-6 h-6 text-gray-900 ml-1" fill="currentColor" viewBox="0 0 20 20">
+            <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+              <svg class="w-3 h-3 text-gray-900 ml-0.5" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M8 5v10l8-5z"/>
               </svg>
             </button>
           </div>
           <!-- Video Duration -->
-          <div class="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
+          <div class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">
             {testimonial.duration}
           </div>
         </div>
         
         <!-- Content -->
-        <div class="p-6">
-          <div class="flex items-center mb-4">
+        <div class="p-3">
+          <div class="flex items-center mb-2">
             <img 
               src={testimonial.image} 
               alt={testimonial.name}
-              class="w-12 h-12 rounded-full object-cover"
+              class="w-7 h-7 rounded-full object-cover"
             />
-            <div class="ml-4">
-              <h3 class="font-semibold text-gray-900">{testimonial.name}</h3>
-              <p class="text-gray-600 text-sm">{testimonial.role}</p>
+            <div class="ml-2">
+              <h3 class="font-semibold text-gray-900 text-xs">{testimonial.name}</h3>
+              <p class="text-gray-600 text-xs">{testimonial.role}</p>
             </div>
           </div>
           
           <!-- Stars -->
-          <div class="flex mb-3">
+          <div class="flex mb-2">
             {Array.from({ length: testimonial.rating }, (_, i) => (
-              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+              <svg class="w-3 h-3 text-yellow-400 fill-current" viewBox="0 0 20 20">
                 <path d="M10 15l-5.878 3.09 1.123-6.545L0 6.91l6.564-.955L10 0l3.436 5.955L20 6.91l-5.245 4.635L16.878 18z"/>
               </svg>
             ))}
           </div>
           
           <!-- Comment -->
-          <blockquote class="text-gray-700 leading-relaxed">
+          <blockquote class="text-gray-700 text-xs leading-relaxed">
             "{testimonial.comment}"
           </blockquote>
         </div>
