@@ -5,8 +5,7 @@ export default {
       colors: {
           black: "#0F172B",
           grey: "#62748E",
-          primary: "#00ffe0",
-          secondary: "#1e40af",
+          primary: "#1e40af",
           bgColor: "#f4f8fbff"   
       },
       fontFamily: {
