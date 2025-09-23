@@ -11,8 +11,11 @@ import Footer from '../components/Footer.astro';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Brnsoon</title>
+
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
   </head>
-  <body>
+  <body class="bg-bgColor font-sans">
     <Navbar />
 	    <main>
       <slot />
@@ -26,7 +29,6 @@ import Footer from '../components/Footer.astro';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color:#f4f8fb;
-
+    
   }
 </style>
