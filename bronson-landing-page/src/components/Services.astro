@@ -1,63 +1,122 @@
-<section class="w-full bg-gradient-to-br from-gray-900 via-gray-800 to-black py-14 md:py-28 px-7 md:px-20">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-start gap-12">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros Más Vendidos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/ScrollTrigger.js"></script>
+</head>
+<body class="bg-gray-900 min-h-screen">
+    <section class="books-section w-full bg-gradient-to-br from-gray-900 via-gray-800 to-black py-14 md:py-28 px-7 md:px-20">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-start gap-12">
 
-    <!-- Columna izquierda -->
-    <div class="md:w-2/5 flex flex-col gap-6 text-white">
-      <h2 class="font-display text-[40px] md:text-[70px] text-center md:text-start font-bold leading-[1.1] text-blue-400">
-        Bestselling
-        <span class="block text-blue-400 font-extrabold tracking-wide">BOOKS</span>
-      </h2>
+            <!-- Left column -->
+            <div class="md:w-2/5 flex flex-col gap-6 text-white">
+                <h2 class="font-display text-[40px] md:text-[70px] text-center md:text-start font-bold leading-[1.1] text-blue-400">
+                    Bestselling
+                    <span class="block text-blue-400 font-extrabold tracking-wide">BOOKS</span>
+                </h2>
+                <p class="hidden lg:block text-[15px] md:text-[17px] leading-relaxed tracking-wide text-gray-200">
+                    Estos libros fueron creados para acompañarte en tu proceso de aprendizaje...
+                </p>
+            </div>
 
-      <p class="hidden lg:block text-[15px] md:text-[17px] leading-relaxed tracking-wide text-gray-200">
-        Estos libros fueron creados para acompañarte en tu proceso de aprendizaje.
-        Incluyen explicaciones claras, ejemplos prácticos y consejos que me hubiese encantado
-        tener cuando empecé. Ideales si querés mejorar tus habilidades y crear proyectos más profesionales.
-      </p>
-    </div>
+            <!-- Right column -->
+            <div class="md:w-3/5 flex flex-col gap-6">
+                <div class="books-viewport w-full overflow-hidden">
+                    <div class="books-track inline-flex flex-nowrap gap-6 items-start">
 
-    <!-- Columna derecha -->
-    <div class="md:w-3/5 flex flex-col gap-12">
+                        <!-- Book 1 - Más ancho y menos alto -->
+                        <article class="book flex flex-col items-center gap-3 flex-shrink-0 w-[320px] h-[380px] bg-blue-500 p-6 rounded-xl text-white book-card">
+                            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Portada" class="w-[180px] h-[140px] object-cover rounded-md shadow-lg" />
+                            <h3 class="text-[20px] md:text-[22px] font-bold mt-1 text-center">Guía de Marketing</h3>
+                            <p class="text-[14px] md:text-[15px] text-white/80 text-center px-2">Aprende desde los fundamentos hasta las estrategias avanzadas de marketing digital.</p>
+                            <button class="mt-auto bg-white text-blue-500 rounded-md px-5 py-2 font-semibold hover:bg-gray-100 transition shadow-md">Comprar</button>
+                        </article>
 
-      <!-- Libro 1 -->
-      <article class="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6">
-        <img
-          src="/images/ebook1.png"
-          alt="Portada Libro 1"
-          class="w-[220px] sm:w-[240px] md:w-40 md:h-36 object-cover shadow-lg rounded-none flex-shrink-0"
-        />
-        <div class="flex-1 min-w-0 text-center md:text-left">
-          <h3 class="text-[21px] md:text-[25px] font-bold text-white mb-2">
-            Guía de Marketing para Principiantes
-          </h3>
-          <p class="text-[16px] md:text-[18px] text-white/80 leading-relaxed break-words mb-3">
-            Aprende desde los fundamentos hasta hooks modernos de manera simple y con proyectos prácticos.
-          </p>
-          <button class="mt-3 bg-primary hover:bg-primary/90 transition text-white text-[18px] rounded-md px-4 py-3 shadow-md">
-            Comprar
-          </button>
+                        <!-- Book 2 -->
+                        <article class="book flex flex-col items-center gap-3 flex-shrink-0 w-[320px] h-[380px] bg-green-500 p-6 rounded-xl text-white book-card">
+                            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Portada" class="w-[180px] h-[140px] object-cover rounded-md shadow-lg" />
+                            <h3 class="text-[20px] md:text-[22px] font-bold mt-1 text-center">Guía de Ventas</h3>
+                            <p class="text-[14px] md:text-[15px] text-white/80 text-center px-2">Aprende estrategias efectivas para aumentar tus ventas y cerrar más tratos.</p>
+                            <button class="mt-auto bg-white text-green-500 rounded-md px-5 py-2 font-semibold hover:bg-gray-100 transition shadow-md">Comprar</button>
+                        </article>
+
+                        <!-- Book 3 -->
+                        <article class="book flex flex-col items-center gap-3 flex-shrink-0 w-[320px] h-[380px] bg-purple-500 p-6 rounded-xl text-white book-card">
+                            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Portada" class="w-[180px] h-[140px] object-cover rounded-md shadow-lg" />
+                            <h3 class="text-[20px] md:text-[22px] font-bold mt-1 text-center">Guía de Productividad</h3>
+                            <p class="text-[14px] md:text-[15px] text-white/80 text-center px-2">Aprende a organizar tu tiempo y aumentar tu productividad de manera efectiva.</p>
+                            <button class="mt-auto bg-white text-purple-500 rounded-md px-5 py-2 font-semibold hover:bg-gray-100 transition shadow-md">Comprar</button>
+                        </article>
+
+                        <!-- Book 4 -->
+                        <article class="book flex flex-col items-center gap-3 flex-shrink-0 w-[320px] h-[380px] bg-red-500 p-6 rounded-xl text-white book-card">
+                            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Portada" class="w-[180px] h-[140px] object-cover rounded-md shadow-lg" />
+                            <h3 class="text-[20px] md:text-[22px] font-bold mt-1 text-center">Guía de Finanzas</h3>
+                            <p class="text-[14px] md:text-[15px] text-white/80 text-center px-2">Domina los conceptos financieros esenciales para gestionar mejor tu dinero.</p>
+                            <button class="mt-auto bg-white text-red-500 rounded-md px-5 py-2 font-semibold hover:bg-gray-100 transition shadow-md">Comprar</button>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
-      </article>
+    </section>
 
-      <!-- Libro 2 -->
-      <article class="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6">
-        <img
-          src="/images/ebook2.png"
-          alt="Portada Libro 2"
-          class="w-[220px] sm:w-[240px] md:w-40 md:h-36 object-cover shadow-lg rounded-none flex-shrink-0"
-        />
-        <div class="flex-1 min-w-0 text-center md:text-left">
-          <h3 class="text-[21px] md:text-[25px] font-bold text-white mb-2">
-            Diseño Web Moderno
-          </h3>
-          <p class="text-[16px] md:text-[18px] text-white/80 leading-relaxed break-words mb-3">
-            Principios de UI/UX, patrones de diseño y tips para crear interfaces limpias y atractivas.
-          </p>
-          <button class="mt-3 bg-primary hover:bg-primary/90 transition text-white text-[18px] rounded-md px-4 py-3 shadow-md">
-            Comprar
-          </button>
-        </div>
-      </article>
+    <!-- Script: put this AFTER the section -->
+    <script type="module">
+        import gsap from "https://cdn.jsdelivr.net/npm/gsap@3.12.5/index.js";
+        import { ScrollTrigger } from "https://cdn.jsdelivr.net/npm/gsap@3.12.5/ScrollTrigger.js";
+        gsap.registerPlugin(ScrollTrigger);
 
-    </div>
-  </div>
-</section>
+        // DOM references (script is after section so elements exist)
+        const section = document.querySelector('.books-section');
+        const track = section.querySelector('.books-track');
+        const viewport = section.querySelector('.books-viewport');
+
+        function initHorizontalScroll() {
+            // remove previous triggers (if any)
+            ScrollTrigger.getAll().forEach(t => t.kill());
+
+            // reset any transform
+            gsap.set(track, { x: 0 });
+
+            // Calculate the exact distance needed to show all books
+            const trackWidth = track.scrollWidth;
+            const viewportWidth = viewport.offsetWidth;
+            const distance = trackWidth - viewportWidth;
+
+            if (distance <= 0) return; // nothing to scroll horizontally
+
+            // animate the track's x from 0 to -distance while the section is pinned
+            gsap.to(track, {
+                x: -distance,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top 10%",
+                    end: `+=${distance + viewportWidth}`, // Add viewport width to ensure full visibility
+                    scrub: true,
+                    pin: true,
+                    anticipatePin: 1,
+                    // markers: true // Uncomment for debugging
+                }
+            });
+        }
+
+        // Initialize on page load
+        setTimeout(initHorizontalScroll, 100);
+
+        // Refresh on resize (debounced)
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(initHorizontalScroll, 250);
+        });
+    </script>
+</body>
+</html>
