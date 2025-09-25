@@ -1,43 +1,65 @@
 ---
+// WorkWithMe.astro
 ---
 
-<section class="w-full bg-gradient-to-br from-gray-900 via-gray-800 to-black py-12 px-6 md:px-16">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:gap-10">
+<section class="w-full min-h-screen relative overflow-hidden flex items-center py-12 px-6 md:px-16">
+  <!-- Contenedor de fondo con imagen y gradiente -->
+  <div class="absolute inset-0 z-1">
+    <!-- Imagen de fondo -->
+    <img 
+      src="/images/mentor1.jpg" 
+      alt="Foto de mentoría" 
+      class="w-full h-full object-cover object-center"
+    />
+    <!-- Overlay con gradiente para difuminado -->
+    <!-- Desktop: difuminado de izquierda a derecha -->
+    <div class="absolute inset-0 hidden md:block bg-gradient-to-l from-black/90 via-black/50 to-transparent"></div>
+    <!-- Mobile: difuminado de arriba hacia abajo -->
+    <div class="absolute inset-0 md:hidden bg-gradient-to-b from-black/70 via-black/40 to-black/90"></div>
+  </div>
 
-    <!-- Columna izquierda -->
-    <div class="flex flex-col gap-4 md:w-2/5 text-white relative z-10">
-      <h4 class="text-[32px] md:text-[52px] font-bold text-center md:text-left leading-tight">
-        Mentorías 1:1
-      </h4>
-      <p class="text-[16px] md:text-[18px] text-white/80 leading-relaxed text-center md:text-left">
-        Trabajar juntos de forma personalizada puede acelerar tu aprendizaje y darte claridad
-        en tu camino como desarrollador. Vamos paso a paso con tu proyecto, código o roadmap.
-      </p>
-      <button
-        class="mx-auto md:mx-0 mt-3 bg-[#00ffe0] text-black text-[18px] md:text-[20px] font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-gradient-to-r hover:from-[#d5f1fb] hover:to-[#d9f9ee] transition-all duration-300">
-        Trabaja conmigo
-      </button>
-    </div>
-
-    <!-- Columna derecha con imagen de fondo -->
-    <div
-      class="relative md:w-3/5 h-72 md:h-[400px] mt-8 md:mt-0 rounded-2xl overflow-hidden shadow-xl">
-
-      <!-- Imagen como background -->
-      <div
-        class="absolute inset-0 bg-cover bg-center"
-        style="background-image: url('/images/mentor1.jpg');">
+  <!-- Contenido -->
+  <div class="relative z-2 max-w-6xl mx-auto w-full">
+    <div class="flex flex-col md:flex-row md:items-center md:gap-10">
+      <!-- Columna izquierda - Contenido -->
+      <div class="flex flex-col gap-4 md:w-2/5 text-white">
+        <h4 class="text-3xl md:text-5xl font-bold text-center md:text-left leading-tight">
+          Mentorías 1:1
+        </h4>
+        <p class="text-base md:text-lg text-white/80 leading-relaxed text-center md:text-left">
+          Trabajar juntos de forma personalizada puede acelerar tu aprendizaje y darte claridad en tu camino como desarrollador. Vamos paso a paso con tu proyecto, código o roadmap.
+        </p>
+        <button class="mx-auto md:mx-0 mt-3 bg-primary text-black text-lg md:text-xl font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-gradient-to-r hover:from-[#d5f1fb] hover:to-[#d9f9ee] transition-all duration-300 w-fit">
+          Trabaja conmigo
+        </button>
       </div>
 
-      <!-- Overlay DIFUMINADO -->
-      <!-- Mobile: de arriba a abajo -->
-      <!-- Desktop: de izquierda a derecha -->
-      <div
-        class="absolute inset-0 
-          bg-gradient-to-b from-black/70 via-black/20 to-transparent
-          md:bg-gradient-to-l md:from-black/70 md:via-black/20 md:to-transparent">
+      <!-- Columna derecha - Espacio para equilibrio visual -->
+      <div class="md:w-3/5 h-72 md:h-[400px] mt-8 md:mt-0">
+        <!-- Este espacio mantiene el equilibrio del layout -->
       </div>
     </div>
-
   </div>
 </section>
+
+<style>
+  /* Estilos adicionales para mejorar el efecto de difuminado */
+  .absolute {
+    position: absolute;
+  }
+  .relative {
+    position: relative;
+  }
+  .inset-0 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .z-1 {
+    z-index: 1;
+  }
+  .z-2 {
+    z-index: 2;
+  }
+</style>
