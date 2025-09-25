@@ -1,12 +1,11 @@
 ---
-// WorkWithMe.astro
 ---
 
 <section class="w-full bg-gradient-to-br from-gray-900 via-gray-800 to-black py-12 px-6 md:px-16">
   <div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:gap-10">
 
     <!-- Columna izquierda -->
-    <div class="flex flex-col gap-4 md:w-2/5 text-white">
+    <div class="flex flex-col gap-4 md:w-2/5 text-white relative z-10">
       <h4 class="text-[32px] md:text-[52px] font-bold text-center md:text-left leading-tight">
         Mentorías 1:1
       </h4>
@@ -20,16 +19,24 @@
       </button>
     </div>
 
-    <!-- Columna derecha (imagen de fondo) -->
+    <!-- Columna derecha con imagen de fondo -->
     <div
       class="relative md:w-3/5 h-72 md:h-[400px] mt-8 md:mt-0 rounded-2xl overflow-hidden shadow-xl">
-      <img
-        src="/images/mentor1.jpg"
-        alt="Foto de mentoría"
-        class="absolute inset-0 w-full h-full object-cover"
-      />
-      <!-- Overlay para difuminar -->
-      <div class="absolute inset-0 bg-gradient-to-l from-black/60 via-black/30 to-transparent"></div>
+
+      <!-- Imagen como background -->
+      <div
+        class="absolute inset-0 bg-cover bg-center"
+        style="background-image: url('/images/mentor1.jpg');">
+      </div>
+
+      <!-- Overlay DIFUMINADO -->
+      <!-- Mobile: de arriba a abajo -->
+      <!-- Desktop: de izquierda a derecha -->
+      <div
+        class="absolute inset-0 
+          bg-gradient-to-b from-black/70 via-black/20 to-transparent
+          md:bg-gradient-to-l md:from-black/70 md:via-black/20 md:to-transparent">
+      </div>
     </div>
 
   </div>
