@@ -1,34 +1,50 @@
 ---
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Brnsoon</title>
 
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Display:wght@400;600;700&display=swap" rel="stylesheet">
-
+    <!-- Google Fonts: Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="bg-bgColor font-sans bg-[url('/images/bgimg.jpg')] bg-center bg-cover bg-no-repeat">
-    <Navbar />
-	    <main>
+
+  <body
+    class="min-h-screen flex flex-col bg-bgColor font-sans bg-[url('/images/bgimg.jpg')] bg-center bg-cover bg-no-repeat"
+  >
+    <!-- Header -->
+    <header>
+      <Navbar />
+    </header>
+
+    <!-- Main content -->
+    <main class="flex-1">
       <slot />
     </main>
+
+    <!-- Footer -->
     <Footer />
   </body>
 </html>
 
 <style>
-  body{
+  /* Reset mínimo */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    
   }
 </style>
