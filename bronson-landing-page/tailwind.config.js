@@ -3,16 +3,16 @@ export default {
   theme: {
     extend: {
       colors: {
-          black: "#0F172B",
-          grey: "#62748E",
-          primary: "#1e40af",
-          bgColor: "#f4f8fbff"   
+        black: "#0F172B",
+        grey: "#62748E",
+        primary: "#1e40af",
+        bgColor: "#f4f8fbff",
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        display: ['Inter Display', 'sans-serif'],
+        sans: ["Inter", "sans-serif"],          // párrafos
+        display: ["Inter Display", "sans-serif"] // títulos
       },
     },
   },
   plugins: [],
-}
+};
