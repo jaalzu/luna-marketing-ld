@@ -1,4 +1,5 @@
 ---
+import BackToTop  from './ui/BackToTop'
 // Footer.astro
 const currentYear = new Date().getFullYear();
 
@@ -22,16 +23,8 @@ const socialLinks = [
 ---
 
 <footer class="bg-black relative">
-  <!-- Back to Top Button -->
-  <button 
-    id="backToTop"
-    class="fixed bottom-6 right-6 w-12 bg-primary h-12 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 z-50 opacity-0 pointer-events-none"
-    aria-label="Volver arriba"
-  >
-    <svg class="w-6 h-6 text-white mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
-    </svg>
-  </button>
+  <BackToTop client:idle />
+
 
   <!-- Footer Content -->
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -69,52 +62,3 @@ const socialLinks = [
     </div>
   </div>
 </footer>
-
-<style>
-  #backToTop.show {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  @media (max-width: 768px) {
-    nav {
-      order: 3;
-    }
-    
-    .flex.space-x-4 {
-      order: 2;
-    }
-    
-    nav .space-x-8 > * + * {
-      margin-left: 1.5rem;
-    }
-  }
-</style>
-
-<script>
-  const backToTopButton = document.getElementById('backToTop');
-  
-  if (backToTopButton) {
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 300) {
-        backToTopButton.classList.add('show');
-      } else {
-        backToTopButton.classList.remove('show');
-      }
-    });
-
-    backToTopButton.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
-
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-</script>
