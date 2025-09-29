@@ -4,37 +4,29 @@ const testimonials = [
   {
     id: 1,
     name: "María González",
-    role: "Empresaria",
     image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=64&h=64&fit=crop&crop=face&auto=format",
     comment: "Increíble servicio, superó todas mis expectativas. El equipo es muy profesional.",
-    rating: 5,
     duration: "2:34"
   },
   {
     id: 2,
     name: "Carlos Ruiz",
-    role: "Director de Marketing",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=64&h=64&fit=crop&crop=face&auto=format",
     comment: "La mejor decisión que tomamos fue trabajar con ellos. Los resultados hablan por sí solos.",
-    rating: 5,
     duration: "1:45"
   },
   {
     id: 3,
     name: "Ana Martín",
-    role: "CEO Startup",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=64&h=64&fit=crop&crop=face&auto=format",
     comment: "Transformaron completamente nuestro negocio. Su enfoque innovador marcó la diferencia.",
-    rating: 5,
     duration: "3:12"
   },
   {
     id: 4,
     name: "Jorge López",
-    role: "Freelancer",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=64&h=64&fit=crop&crop=face&auto=format",
     comment: "Excelente atención al cliente y resultados excepcionales. Los recomiendo al 100%.",
-    rating: 5,
     duration: "2:18"
   }
 ];
@@ -42,71 +34,56 @@ const testimonials = [
 
 <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
   <!-- Header -->
-  <div class="text-center mb-8">
-    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-      Testimonios
+  <div class="text-center mb-12">
+    <h3 class="text-2xl md:text-3xl font-bold text-gray-900">
+      Experiencias de clientes
     </h3>
   </div>
 
   <!-- Testimonials Grid -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
     {testimonials.map((testimonial) => (
-      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-        <!-- Video Container -->
-        <div class="relative bg-gray-900 aspect-[5/3]">
+      <div class="flex flex-col items-center text-center">
+        <!-- Video Container (Smaller) -->
+        <div class="relative bg-gray-900 rounded-lg overflow-hidden w-full max-w-sm aspect-video mb-4">
           <div class="absolute inset-0 flex items-center justify-center">
-            <!-- Play Button -->
-            <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
-              <svg class="w-3 h-3 text-gray-900 ml-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M8 5v10l8-5z"/>
+            <!-- Minimalist Play Button -->
+            <button 
+              class="group w-16 h-16 flex items-center justify-center hover:scale-110 transition-transform duration-200"
+              aria-label={`Reproducir testimonial de ${testimonial.name}`}
+            >
+              <svg class="w-16 h-16 text-white opacity-90 group-hover:opacity-100 transition-opacity" fill="currentColor" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" fill="white" fill-opacity="0.2"/>
+                <path d="M10 8.5v7l6-3.5z"/>
               </svg>
             </button>
           </div>
           <!-- Video Duration -->
-          <div class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">
+          <div class="absolute bottom-3 right-3 bg-black bg-opacity-60 text-white px-2 py-1 rounded text-xs font-medium">
             {testimonial.duration}
           </div>
         </div>
         
-        <!-- Content -->
-        <div class="p-3">
-          <div class="flex items-center mb-2">
-            <img 
-              src={testimonial.image} 
-              alt={testimonial.name}
-              class="w-7 h-7 rounded-full object-cover"
-            />
-            <div class="ml-2">
-              <h3 class="font-semibold text-gray-900 text-xs">{testimonial.name}</h3>
-              <p class="text-gray-600 text-xs">{testimonial.role}</p>
-            </div>
-          </div>
-          
-          <!-- Stars -->
-          <div class="flex mb-2">
-            {Array.from({ length: testimonial.rating }, (_, i) => (
-              <svg class="w-3 h-3 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                <path d="M10 15l-5.878 3.09 1.123-6.545L0 6.91l6.564-.955L10 0l3.436 5.955L20 6.91l-5.245 4.635L16.878 18z"/>
-              </svg>
-            ))}
-          </div>
-          
-          <!-- Comment -->
-          <blockquote class="text-gray-700 text-xs leading-relaxed">
-            "{testimonial.comment}"
-          </blockquote>
-        </div>
+        <!-- Name -->
+        <h4 class="font-semibold text-gray-900 text-lg mb-2">
+          {testimonial.name}
+        </h4>
+        
+        <!-- Quote -->
+        <blockquote class="text-gray-600 text-sm leading-relaxed max-w-md">
+          "{testimonial.comment}"
+        </blockquote>
       </div>
     ))}
   </div>
 </section>
 
 <script>
-  // Funcionalidad para los botones de play (opcional)
-  document.querySelectorAll('button').forEach(button => {
+  // Funcionalidad para los botones de play
+  document.querySelectorAll('button[aria-label^="Reproducir"]').forEach(button => {
     button.addEventListener('click', () => {
-      // Aquí puedes agregar la lógica para reproducir el video
       console.log('Reproducir video testimonio');
+      // Aquí puedes agregar la lógica para reproducir el video
     });
   });
 </script>

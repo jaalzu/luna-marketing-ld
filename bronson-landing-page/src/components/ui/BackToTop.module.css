@@ -1,1 +1,0 @@
-@media (max-width: 768px) { nav { order: 3; } .flex.space-x-4 { order: 2; } nav .space-x-8 > * + * { margin-left: 1.5rem; } }
