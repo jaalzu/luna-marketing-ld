@@ -1,4 +1,3 @@
-import styles from './BackToTop.module.css'
 import {useState,useEffect} from 'react'
 
 export default function BackToTop(){
@@ -15,7 +14,7 @@ useEffect(() => {
 
 
     return (
-        <div className={styles.nav}>
+        <div >
 <button
   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
   className={`fixed bottom-6 right-6 w-12 bg-primary h-12 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 z-50 
