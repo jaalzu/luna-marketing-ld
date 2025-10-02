@@ -12,7 +12,7 @@ export default function BookCard({ title, description, image, color }) {
       <p className="text-[13px] md:text-[15px] text-center px-2 line-clamp-2 leading-snug">
         {description}
       </p>
-      <button className="mt-8 bg-white text-gray-800 rounded-md px-11 py-3 font-bold hover:bg-opacity-80 transition shadow-md text-[14px]">
+      <button type="button" className="mt-8 bg-white text-gray-800 rounded-md px-11 py-3 font-bold hover:bg-opacity-80 transition shadow-md text-[14px]">
         Comprar
       </button>
     </article>
