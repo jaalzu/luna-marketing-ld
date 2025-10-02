@@ -1,16 +1,21 @@
 ---
 // WorkWithMe.astro
+ import { Image } from 'astro:assets';
+import mentor1 from '../assets/images/mentor1.webp';
 ---
 
 <section class="w-full relative overflow-hidden flex items-center pt-12 px-6 md:px-16 
   min-h-[60vh] md:min-h-screen">
   <!-- Contenedor de fondo con imagen y gradiente -->
   <div class="absolute inset-0 z-1">
-    <img 
-      src="/images/mentor1.webp" 
-      alt="Foto de mentoría" 
-      class="w-full h-full object-cover object-center"
-    />
+ <Image 
+  src={mentor1}
+  alt="Foto de mentoría" 
+  width={800}
+  height={600}
+  loading="lazy"
+  class="w-full h-full object-cover object-center"
+/>
     <div class="absolute inset-0 bg-black/70"></div>
   </div>
 

@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import aboutMentor from '../assets/images/aboutMentor.webp';
 ---
 
 <section class="flex flex-col items-center gap-8 px-4 md:px-16 py-16">
@@ -9,12 +11,13 @@
 
   <!-- Contenedor foto + texto -->
   <div class="flex flex-col md:flex-row items-center md:items-start gap-12 max-w-6xl w-full">
-    
-    <!-- Foto -->
-   <img
-  src="/images/aboutMentor.webp"
+<Image 
+  src={aboutMentor}
   alt="Foto de Azul"
-  class="w-3/5 md:w-2/5 rounded shadow-md object-cover"
+  width={500}
+  height={600}
+  loading="lazy"
+  class="w-5/5 md:w-2/5 rounded shadow-md object-cover"
 />
 
     <!-- Textos -->
